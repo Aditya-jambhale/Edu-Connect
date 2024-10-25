@@ -12,6 +12,7 @@ from routes.career_path_routes import career_bp
 from studdybuddy.chatbot import StudyBuddyChatbot
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
+from routes.teachingroutes import teaching_bp
 
 load_dotenv()
 
@@ -28,6 +29,7 @@ app.register_blueprint(user_bp, url_prefix='/user')
 app.register_blueprint(professional_bp, url_prefix='/professional')
 app.register_blueprint(quiz_bp, url_prefix='/quizes')
 app.register_blueprint(career_bp, url_prefix='/career')
+app.register_blueprint(teaching_bp)
 
 # App configuration
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")

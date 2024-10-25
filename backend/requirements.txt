@@ -1,0 +1,9 @@
+Flask
+flask_pymongo
+flask_jwt_extended
+pyjwt
+google-generativeai
+python-dotenv
+flask_socketio
+eventlet
+flask_cors

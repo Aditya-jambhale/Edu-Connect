@@ -99,6 +99,7 @@ export default function Header() {
                 <span className="block text-white hover:text-orange-600">Home</span>
               </Link>
             </li>
+            <li><Link href="/teachingassistant" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Teaching Assistant</span></Link></li>
             <li><Link href="/todowork" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">To-Do</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Study Buddy</span></Link></li>
             <li><Link href="/quiz" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Quiz</span></Link></li>

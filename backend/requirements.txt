@@ -7,3 +7,4 @@ python-dotenv
 flask_socketio
 eventlet
 flask_cors
+text_input

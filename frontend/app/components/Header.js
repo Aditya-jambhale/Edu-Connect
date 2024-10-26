@@ -97,7 +97,7 @@ export default function Header() {
                 <span className="block text-white hover:text-orange-600">Home</span>
               </Link>
             </li>
-            <li><Link href="/todowork" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">To-Do</span></Link></li>
+            {/* <li><Link href="/todowork" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">To-Do</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Study Buddy</span></Link></li>
             <li><Link href="/quiz" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Quiz</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Connect Globally</span></Link></li>
@@ -108,7 +108,16 @@ export default function Header() {
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Contact Us</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">About Us</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Help</span></Link></li>
-            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Settings</span></Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Settings</span></Link></li> */}
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Interview Preparation</span></Link></li>
+            <li><Link href="/career" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Career Guidance</span></Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Campus Connect</span></Link></li>
+            <li><Link href="/career" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Connect Globally</span></Link></li>
+            <li><Link href="/quiz" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Quiz</span></Link></li>
+            <li><Link href="/extrafeatures" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Extra Features</span></Link></li> 
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Contact Us</span></Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">About Us</span></Link></li>
+
           </ul>
         </div>
       )}

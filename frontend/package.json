@@ -17,7 +17,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
+<<<<<<< HEAD
     "socket.io": "^4.8.1",
+=======
+>>>>>>> fe157ef3a22dfe6f84d7dd71c4af917708ce4cc0
     "socket.io-client": "^4.8.1"
   },
   "devDependencies": {

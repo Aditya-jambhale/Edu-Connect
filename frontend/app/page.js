@@ -313,6 +313,8 @@ export default function Home() {
         {[
           { title: 'Current To-Do Task', description: 'Complete your assignments!', link: '/todowork' },
 
+          { title: 'Mentor Connect', description: 'Get study materials tailored for you.', link: '/mentor' },
+
           { title: 'Study Buddy', description: 'Complete your assignments!', link: '/' },
           { title: 'Boast Mind', description: 'Complete your assignments!', link: '/boostmind' },
           { title: 'Study Materials', description: 'Complete your assignments!', link: '/' },
@@ -324,6 +326,7 @@ export default function Home() {
           // { title: 'Resource', description: 'All you need here.', link: '/' }
 
           { title: 'Personalized Study', description: 'Get study materials tailored for you.', link: '/' },
+
           { title: 'Connect Globally', description: 'Join our global study community.', link: '/connect' },
           { title: 'Quiz', description: 'Test your knowledge with our quizzes.', link: '/quiz' },
           { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/interview' },

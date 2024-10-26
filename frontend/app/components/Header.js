@@ -37,9 +37,11 @@ export default function Header() {
         </div>
 
         {/* Logo and Name (Centered) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-          <h1 className="text-4xl font-bold text-white">EduConnect</h1>
-        </div>
+       <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
+      <Link href="/" passHref>
+       <h1 className="text-4xl font-bold text-white cursor-pointer">EduConnect</h1>
+      </Link>
+      </div> 
 
         {/* Right side: Notification & Login/Logout */}
         <div className="flex items-center space-x-4 relative">
@@ -101,13 +103,13 @@ export default function Header() {
             <li><Link href="/todowork" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">To-Do</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Study Buddy</span></Link></li>
             <li><Link href="/quiz" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Quiz</span></Link></li>
-            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Connect Globally</span></Link></li>
+            <li><Link href="/connect" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Connect Globally</span></Link></li>
             <li><Link href="/career" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Career Guidance</span></Link></li>
-            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Interview Preparation</span></Link></li>
+            <li><Link href="/interview" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Interview Preparation</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Study Material</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Boost Mind</span></Link></li>
-            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Contact Us</span></Link></li>
-            <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">About Us</span></Link></li>
+            <li><Link href="/contactus" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Contact Us</span></Link></li>
+            <li><Link href="/aboutus" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">About Us</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Help</span></Link></li>
             <li><Link href="/" onClick={() => setIsMenuOpen(false)}><span className="block text-white hover:text-orange-600">Settings</span></Link></li>
           </ul>

@@ -1,14 +1,13 @@
-// layout.js
+// app/layout.js
 
-"use client"; // This marks the component as a Client Component
-
+"use client";
 import './globals.css'; 
-import Header from './components/Header'; // Import Header component
-import Footer from './components/Footer'; // Import Footer component
-import { usePathname } from 'next/navigation'; // Use Next.js hook for pathname detection
+import Header from './components/Header'; 
+import Footer from './components/Footer'; 
+import { usePathname } from 'next/navigation'; 
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname(); // Get the current route
+  const pathname = usePathname(); 
 
   // List of routes where the Header and Footer should not be displayed
   const noHeaderFooterRoutes = ['/login', '/register'];
@@ -19,7 +18,7 @@ export default function RootLayout({ children }) {
         {/* Conditionally render Header */}
         {!noHeaderFooterRoutes.includes(pathname) && <Header />}
 
-        {/* The rest of the page will render below the header */}
+        {/* Main content */}
         <main className="min-h-screen">
           {children}
         </main>

@@ -312,7 +312,7 @@ export default function Home() {
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { title: 'Current To-Do Task', description: 'Complete your assignments!', link: '/todowork' },
-          { title: 'Personalized Study', description: 'Get study materials tailored for you.', link: '/' },
+          { title: 'Mentor Connect', description: 'Get study materials tailored for you.', link: '/mentor' },
           { title: 'Connect Globally', description: 'Join our global study community.', link: '/connect' },
           { title: 'Quiz', description: 'Test your knowledge with our quizzes.', link: '/quiz' },
           { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/interview' },

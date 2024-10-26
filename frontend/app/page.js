@@ -81,7 +81,7 @@ export default function Home() {
       {/* AI Assistant Section */}
       <section
         id="studyBuddyAI"
-        className="bg-gray-800 p-6 rounded-lg shadow-md flex flex-col mb-6"
+        className="bg-gray-800 p-6 rounded-lg shadow-md flex flex-col mb-6 "
         style={{ height: '600px' }}
       >
         <h2 className="text-2xl font-bold text-purple-600 mb-4 text-center">🎓 Study Buddy AI Assistant</h2>
@@ -166,9 +166,9 @@ export default function Home() {
         {[
           { title: 'Current To-Do Task', description: 'Complete your assignments!', link: '/todowork' },
           { title: 'Personalized Study', description: 'Get study materials tailored for you.', link: '/' },
-          { title: 'Connect Globally', description: 'Join our global study community.', link: '/' },
+          { title: 'Connect Globally', description: 'Join our global study community.', link: '/connect' },
           { title: 'Quiz', description: 'Test your knowledge with our quizzes.', link: '/quiz' },
-          { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/' },
+          { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/interview' },
           { title: 'Resource', description: 'All you need here.', link: '/' }
         ].map((item, index) => (
           <div

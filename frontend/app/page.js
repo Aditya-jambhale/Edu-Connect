@@ -309,14 +309,26 @@ export default function Home() {
       </section>
 
       {/* Options Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {[
           { title: 'Current To-Do Task', description: 'Complete your assignments!', link: '/todowork' },
+<<<<<<< HEAD
+          { title: 'Study Buddy', description: 'Complete your assignments!', link: '/' },
+          { title: 'Boast Mind', description: 'Complete your assignments!', link: '/boostmind' },
+          { title: 'Study Materials', description: 'Complete your assignments!', link: '/' }
+
+          // { title: 'Personalized Study', description: 'Get study materials tailored for you.', link: '/' },
+          // { title: 'Connect Globally', description: 'Join our global study community.', link: '/' },
+          // { title: 'Quiz', description: 'Test your knowledge with our quizzes.', link: '/quiz' },
+          // { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/' },
+          // { title: 'Resource', description: 'All you need here.', link: '/' }
+=======
           { title: 'Personalized Study', description: 'Get study materials tailored for you.', link: '/' },
           { title: 'Connect Globally', description: 'Join our global study community.', link: '/connect' },
           { title: 'Quiz', description: 'Test your knowledge with our quizzes.', link: '/quiz' },
           { title: 'Interview Preparation', description: 'Prepare for your upcoming interviews.', link: '/interview' },
           { title: 'Resource', description: 'All you need here.', link: '/' }
+>>>>>>> fe157ef3a22dfe6f84d7dd71c4af917708ce4cc0
         ].map((item, index) => (
           <div
             key={index}

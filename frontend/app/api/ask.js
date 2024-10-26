@@ -5,36 +5,55 @@ export default function TeachingAssistant() {
     const [inputType, setInputType] = useState(''); // To manage the choice between voice and text
     const [topic, setTopic] = useState(''); // To store the typed topic
     const [response, setResponse] = useState(''); // Store AI response
+    const [loading, setLoading] = useState(false); // Loading state
+    const [error, setError] = useState(''); // Error state
 
     const handleTextSubmit = async (e) => {
         e.preventDefault();
-        // Fetch response from the AI API
+        setLoading(true);
+        setError(''); // Clear previous errors
+
+        const controller = new AbortController(); // Create an AbortController instance
+        const signal = controller.signal;
+
+        // Set a timeout for the fetch call
+        const timeoutId = setTimeout(() => {
+            controller.abort(); // Abort the request after 10 seconds
+            setError('Request timed out. Please try again.'); // Update error state
+            setLoading(false); // Stop loading
+        }, 10000); 
+
         try {
-            const res = await fetch('http://localhost:5000/ask', { // Update to full URL
+            const res = await fetch('/api/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ topic }),
+                signal, // Attach the signal to the fetch request
             });
 
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
-            }
+            clearTimeout(timeoutId); // Clear the timeout if the request completes in time
 
-            const data = await res.json();
-            console.log(data, 'this is json response');
-            // Extract the generated_text from the first item in the response array
-            setResponse(data.response[0].generated_text);
-        } catch (error) {
-            console.error('Error fetching AI response:', error);
-            setResponse('Failed to fetch response. Please try again later.'); // Handle error response
+            if (!res.ok) {
+                throw new Error('Network response was not ok'); // Throw an error for bad responses
+            }
+            const data = await res.json(); // Parse JSON response
+            setResponse(data.response); // Update response state
+        } catch (err) {
+            if (err.name === 'AbortError') {
+                setError('Request aborted. Please try again later.'); // Handle abort error
+            } else {
+                setError('Failed to fetch response. Please try again later.'); // Generic error message
+                console.error(err); // Log error for debugging
+            }
+        } finally {
+            setLoading(false); // Stop loading regardless of success or failure
         }
     };
 
     const handleVoiceSubmit = () => {
-        // Call the voice recording function
-        alert('Voice input feature coming soon!');
+        alert('Voice input feature coming soon!'); // Placeholder for voice feature
     };
 
     return (
@@ -82,7 +101,19 @@ export default function TeachingAssistant() {
                 </button>
             )}
 
-            {response && (
+            {loading && (
+                <div className="mt-4">
+                    <p className="text-lg">Loading response...</p>
+                </div>
+            )}
+
+            {error && (
+                <div className="mt-4">
+                    <p className="text-red-500">{error}</p>
+                </div>
+            )}
+
+            {response && !loading && (
                 <div className="text-center mt-4">
                     <h2 className="text-2xl font-bold">AI Response:</h2>
                     <p className="mt-2 text-lg">{response}</p>
